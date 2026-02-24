@@ -15,7 +15,7 @@ param location string = resourceGroup().location
 var vmSkuMap = {
   dev:  'Standard_B2s'    // 月 約$30（2vCPU / 4GB）
   stg:  'Standard_D2s_v5' // 月 約$70（2vCPU / 8GB）
-  prod: 'Standard_B4ms'   // 月 約$140（4vCPU / 16GB）※検証用（本来はD4s_v5等）
+  prod: 'Standard_D4s_v5' // 月 約$140（4vCPU / 16GB）※従量課金サブスクはクォータ不足の場合 Standard_B4ms 等に変更
 }
 
 var vmSku = vmSkuMap[environment]
