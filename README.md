@@ -2,6 +2,8 @@
 
 Zenn 記事「[Azureのコスト爆発を防ぐBicepパターン集](https://zenn.dev/yotan/articles/bicep-cost-guard-patterns)」の動作確認済みサンプルコードです。
 
+続編記事（Bicep user-defined function で本パターン集を関数ライブラリ化する回、下書き中）用に `lib.bicep` / `vm-env-sku-udf.bicep` / `nsg-rules-udf.bicep` を追加しています。
+
 ## パターン一覧
 
 | ファイル | 内容 |
@@ -12,6 +14,9 @@ Zenn 記事「[Azureのコスト爆発を防ぐBicepパターン集](https://zen
 | `storage-lifecycle.bicep` | パターン4: ストレージライフサイクルルール |
 | `tags.bicep` | パターン5: タグ強制（Owner/Project/Environment/CostCenter）|
 | `bastion-dev.bicep` | パターン6: Bastion Developer SKU（dev環境無料）|
+| `lib.bicep` | user-defined function ライブラリ（`@export()`）。SKU解決・ディスクタイプ解決・NSGルール生成 |
+| `vm-env-sku-udf.bicep` | パターン2をUDFで書き直した版（`vm-env-sku.bicep`と比較用） |
+| `nsg-rules-udf.bicep` | UDFで共通化したNSGルールを`for`ループでリソースに展開する例 |
 
 ## 使い方
 
